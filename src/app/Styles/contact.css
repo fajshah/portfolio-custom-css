@@ -1,0 +1,143 @@
+/* === Contact Section === */
+
+/* Container for the contact section */
+.contact-container {
+  padding-top: 8rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* === Grid Layout === */
+
+/* Grid layout for contact items */
+.contact-grid {
+  display: grid;
+  gap: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 2fr);
+  }
+}
+
+/* === Typography === */
+
+/* Heading styling */
+.contact-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Description text */
+.contact-text {
+  color: #425166;
+  font-size: 1.125rem;
+  padding-top: 0.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* === Flex Layout === */
+
+/* Flex layout for contact details (email, phone, etc.) */
+.contact-flex {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Utility class for vertical alignment and spacing */
+.contact-space {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* === Form Styles === */
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Input and textarea fields */
+.input-field,
+.textarea-field {
+  background-color: transparent;
+  border: 1px solid #08e95e;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  outline: none;
+  border-color: #333; /* Change border color on focus */
+}
+
+.input-field:hover,
+.textarea-field:hover {
+  border-color: #58c76a; /* Border color on hover */
+}
+
+/* Textarea-specific adjustments */
+.textarea-field {
+  resize: vertical;
+  min-height: 250px;
+}
+
+/* === Button Styles === */
+
+/* Button styling */
+.button {
+  width: fit-content;
+  background-color: blue;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.button:hover {
+  background-color: #706262;
+}
+
+/* === Responsive Styles === */
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  /* Heading font size */
+  .contact-heading {
+    font-size: 2.25rem;
+  }
+
+  /* Container padding */
+  .contact-container {
+    padding-top: 6rem;
+  }
+
+  /* Input and textarea padding */
+  .input-field,
+  .textarea-field {
+    padding: 0.75rem;
+  }
+
+  /* Button adjustments for mobile */
+  .button {
+    width: 100%; /* Full-width button */
+    text-align: center;
+    margin-top: 1rem; /* Space above button */
+  }
+}

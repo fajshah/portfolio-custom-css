@@ -1,23 +1,29 @@
 import React from "react";
 import Image from "next/image";
+import '../app/styles/about.css';
 
 const About = () => {
+  // Use environment variable or default to local image
+  const imageUrl = "/pic2.avif";
+
   return (
-    <div id="about" className="container mx-auto pt-32 px-4">
+    <div id="about" className="about-container">
     
-      <div className="flex items-center justify-center">
+      <div>
         <Image
-          src="/pic2.avif"
+          src={imageUrl}
           alt="Profile Image"
-          width={700}
-          height={700}
-          className="rounded-full"  data-aos="zoom-in-up"
+          width={600}
+          height={600}
+          className="rounded-full"  
+          data-aos="zoom-in-up"
+          priority
         />
       </div>
       
-      <div className="text-center mt-10">
-        <h2 className="text-4xl md:text-5xl font-bold" data-aos="zoom-in-up">About Me</h2>
-        <p className="text-gray-500 pt-6" data-aos="zoom-in-up">
+      <div className="text-center">
+        <h2 className="about-heading" data-aos="zoom-in-up">About Me</h2>
+        <p className="about-text" data-aos="zoom-in-up">
           I have a master's degree in English and Teaching from Metropolitan School, and I am currently studying at GIAIC, pursuing a course in Artificial Intelligence, Web 3.0, and the Metaverse. I am passionate about technology and constantly learning new skills to stay up-to-date with the latest innovations.
         </p>
       </div>
@@ -26,3 +32,4 @@ const About = () => {
 };
 
 export default About;
+

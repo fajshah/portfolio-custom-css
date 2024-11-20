@@ -1,0 +1,79 @@
+/* General Container Styles */
+.skills-container {
+  padding-top: 8rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.skills-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 2.25rem;
+}
+
+.skills-space {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Typography */
+.skills-heading {
+  font-weight: inherit;
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.skills-text {
+  color: #667592;
+  padding-top: 0.5rem;
+  margin: 0;
+}
+
+.skills-space h2 {
+  color: rgb(24, 95, 62);
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills-heading {
+    font-size: 2.25rem;
+  }
+
+  .skills-icons-grid {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills-heading {
+    font-size: 1.875rem;
+  }
+
+  .skills-icons-grid {
+    font-size: 1.75rem;
+  }
+}
+

@@ -1,37 +1,51 @@
-import React from 'react'
-import Image from 'next/image'
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import '../app/Styles/card.css';
 
-interface propsType {
+interface PropsType {
   title: string;
   desc: string;
   img: string;
   tags: string[];
 }
 
-const Card:React.FC<propsType> = ({title, desc, img, tags}) => {
-  return(
-    <div className='border border-accent w-[300px] sm:w-[350px]'  data-aos="zoom-in-up">
-    <div>
-      <Image className='w-[300px] sm:w-[350px] h-auto'
-      src={img}
-      width={350}
-      height={350}
-      alt= {title}
-      />
-    </div>
-   <div className='p-4 space-y-4'>
-  <div className='text-4xl font-extralight'>{title}</div>
-  <div>{desc}</div>
-  <div>
-    {tags.map((el) => (
-      <div className='tags' key={el}>
-       {el}
-      </div>))}
-  </div>
-   </div>
+const Card: React.FC<PropsType> = ({ title, desc, img, tags }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-    </div>
-  )
-}
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
+    
+    // Set initial screen size
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-export default Card
+  return (
+    <div className={`card ${isSmallScreen ? '' : 'card-sm'}`} data-aos="zoom-in-up">
+      <div>
+        <Image
+          className={`card-image ${isSmallScreen ? '' : 'card-image-sm'}`}
+          src={img}
+          width={350}
+          height={350}
+          alt={title}
+        />
+      </div>
+      <div className="card-container">
+        <div className="card-title">{title}</div>
+        <div>{desc}</div>
+        <div>
+          {tags.map((tag) => (
+            <div className="card-tags" key={tag}>
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
