@@ -4,8 +4,8 @@
 .contact-container {
   padding-top: 8rem;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: auto;
+  padding:  1rem;
 }
 
 /* === Grid Layout === */
@@ -28,7 +28,7 @@
 .contact-heading {
   font-size: 3rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1%;
   margin: 0;
 }
 

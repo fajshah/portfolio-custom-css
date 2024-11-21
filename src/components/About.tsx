@@ -9,12 +9,12 @@ const About = () => {
   return (
     <div id="about" className="about-container">
     
-      <div>
+      <div className="about-image">
         <Image
           src={imageUrl}
           alt="Profile Image"
-          width={600}
-          height={600}
+          width={500}
+          height={500}
           className="rounded-full"  
           data-aos="zoom-in-up"
           priority

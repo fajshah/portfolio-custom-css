@@ -15,14 +15,14 @@
   line-height: 1.25;
   font-weight: bold;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: auto;
+  align-items: auto;
   color: azure;
   font-size: 6.25rem;
 }
 
 .hero-msin p {
-  margin: 0 auto;
+  margin: 0;
 }
 
 .hidden-lg {
@@ -32,7 +32,7 @@
 @media (max-width: 1024px) {
   .hero-container {
     background-size: 50%;
-    background-position: center;
+    background-position: auto;
   }
 
   .hero-content {

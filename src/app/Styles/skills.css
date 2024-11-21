@@ -1,16 +1,16 @@
 /* General Container Styles */
 .skills-container {
-  padding-top: 8rem;
+  padding-top: 10rem;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin:  auto;
+  padding:  20px;
 }
 
 /* Grid Layout */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -23,7 +23,7 @@
 .skills-space {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 /* Typography */
@@ -31,12 +31,12 @@
   font-weight: inherit;
   margin: 0;
   font-size: 3rem;
-  line-height: 1;
+  line-height: 2;
 }
 
 .skills-text {
   color: #667592;
-  padding-top: 0.5rem;
+  padding-top: 1%;
   margin: 0;
 }
 
@@ -44,7 +44,7 @@
   color: rgb(24, 95, 62);
   font-weight: inherit;
   font-size: inherit;
-  margin: 1;
+  margin: 2%;
 }
 
 /* Responsive Styles */

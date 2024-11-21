@@ -4,13 +4,12 @@
 .about-container {
   padding-top: 8rem;
   width: 100%;
-  max-width: 100px; /* Ensures layout consistency on larger screens */
-  margin: 0 auto;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
   padding: 0 15px; /* Horizontal padding for smaller devices */
   text-align: center;
 }
 
-/* === Typography === */
 
 /* Heading styling */
 .about-heading {
@@ -24,8 +23,8 @@
   color: rgb(110, 103, 103); /* Neutral text color */
   padding-top: 1rem; /* Space above the text */
   line-height: 1.5; /* Improved readability */
-  margin: 0 auto;
-  max-width: 800px; /* Limits text width for better readability */
+  margin: 0 ;
+
 }
 
 /* === Responsive Styles === */
@@ -54,4 +53,5 @@
   .about-text {
     font-size: 1rem; /* Adjusted font size for readability on small screens */
   }
+  
 }
